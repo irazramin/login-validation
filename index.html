@@ -1,34 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login Validation</title>
     <script src="https://cdn.tailwindcss.com"></script>
-      <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primaryColor: '#BA68C8',
-          }
-        }
-      }
-    }
-  </script>
-</head>
-<body>
-    
-
-    <main>
+    <script src="https://kit.fontawesome.com/03c654ecea.js" crossorigin="anonymous"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primaryColor: '#BA68C8',
+              primaryDarkerColor: '#9E04B8',
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <main class="grid grid-cols-2">
+      <div class="bg-primaryDarkerColor w-full h-full">
         <div>
-            <img src="img/GDPR.gif" alt="">
+          <img
+            class="object-cover w-full"
+            src="img/GDPR-cuate.png"
+            alt="login"
+          />
         </div>
-        <div></div>
+      </div>
+      <div class="w-4/6 mx-auto py-12">
+        <h1 class="font-semibold text-3xl">Get's Started.</h1>
+        <span class="text-neutral-500 mt-5 block"
+          >Already have an account?
+          <a class="cursor-pointer text-primaryDarkerColor font-medium"
+            >Log in</a
+          ></span
+        >
+
+        <div class="mt-7">
+          <button class="font-medium border-2 px-5 py-2 rounded-lg">
+            sign up with google
+          </button>
+          <button
+            class="font-medium px-5 py-2 rounded-lg ml-1 bg-blue-500 border-2 border-blue-500 text-white"
+          >
+            sign up with facebook
+          </button>
+
+          <div class="mt-14">
+            <form>
+              <div>
+                <label class="block" for="email">Email Address</label>
+                <input
+                  type="email"
+                  id="email"
+                  class="border-2 w-full px-3 py-2 rounded-lg mt-1 focus:outline-primaryDarkerColor focus:shadow"
+                  autocomplete="off"
+                  placeholder="enter your email"
+                />
+                 <p id="email-error" class="text-sm mt-1 ml-1 text-red-500 hidden">
+                <i class="fa-solid fa-circle-info"></i>  you put a invalid email
+                </p>
+              </div>
+              <div class="mt-5">
+                <label class="block" for="Password">Password</label>
+                <input
+                  type="password"
+                  id="password"
+                  class="border-2 w-full px-3 py-2 rounded-lg mt-1 focus:outline-primaryDarkerColor focus:shadow"
+                  autocomplete="off"
+                  placeholder="enter your password"
+                />
+                <p id="password-error" class="text-sm mt-1 ml-1 text-red-500 hidden">
+                <i class="fa-solid fa-circle-info"></i>  you put a invalid password
+                </p>
+              </div>
+              <div class="mt-5">
+                <input
+                  class="w-4 h-4 rounded-md border-0 focus:ring-1 focus:text-green-600"
+                  type="checkbox"
+                  name="tc"
+                  id="tc"
+                />
+                <label for="tc"
+                  >I agree with platforms
+                  <span class="text-primaryDarkerColor font-medium"
+                    >Term & Conditions</span
+                  >
+                  and
+                  <span class="text-primaryDarkerColor font-medium"
+                    >Privacy and policy & Conditions</span
+                  ></label
+                >
+              </div>
+
+              <button
+                id="registration-btn"
+                class="w-full bg-primaryDarkerColor hover:bg-primaryColor text-white py-3 rounded-md mt-10"
+                disabled
+              >
+                Register
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
     </main>
 
-
     <script src="js/app.js"></script>
-</body>
+  </body>
 </html>
